@@ -1,0 +1,39 @@
+Array will hold number of stones
+array of length 14
+
+0-5 - player A pits
+6 Player A store
+7-12 Player B pits
+13 player B store
+
+player must click on its own pit
+pit must have 1 or more stone
+
+
+for(var i = #of stones; i > 0; i--){
+if clicked index == 13{
+index = 0
+}else {
+clicked index ++
+}
+
+if clicked index === 13 && playerA || {
+clicked index = 0 //skips opponent store
+}else if clicked index === 6 && player b{
+index++ //skips opponent score
+}
+
+if i === 1{
+    if player A && index === 6{
+    return play again
+    }
+    
+    if player A and index between 0-5 and array[index] === 0 {
+    take opponets stones + 1
+    
+    opponent stones index = 12 - index
+    }
+}else{
+array[clicked index] += 1
+}
+  
