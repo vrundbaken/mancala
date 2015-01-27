@@ -42,3 +42,16 @@ Template.board.helpers({
         return this.boardData[13];
     }
 });
+
+Template.board.events({
+    'click .pit': function( event, template ){
+        // Prevent default click behavior
+        event.preventDefault();
+        var game = new Mancala.Game(this._id);
+        console.log("about to set pit")
+        var pit = $(event.currentTarget).attr('data-pit-id');
+        
+        console.log(game)
+        //game.move(pit);
+    }
+});
