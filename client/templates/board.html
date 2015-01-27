@@ -1,0 +1,66 @@
+<template name='board'>
+<!--   {{getPit pit='A1' board=boardData}}
+    {{getPitA1 boardData}} -->
+    <div id='board'>
+        <table>
+            <tr>
+                <td rowspan="2" style="background:blue"></td>
+                <td style="background:red"></td>
+                <td style="background:green"></td>
+                <td rowspan="2" style="background:blue"></td>
+            </tr>
+            <tr>
+                <td style="background:red"></td>
+                <td style="background:green"></td>
+            </tr>
+        </table>
+        <div class='bank'>
+            {{bankA}}
+        </div>
+        <div id='pit-container'>
+            <div class='row'>
+                <div class="pit">
+                    {{pitB6}}
+                </div>
+                <div class="pit">
+                    {{pitB5}}
+                </div>
+                <div class="pit">
+                    {{pitB4}}
+                </div>
+                <div class="pit">
+                    {{pitB3}}
+                </div>
+                <div class="pit">
+                    {{pitB2}}
+                </div>
+                <div class="pit">
+                    {{pitB1}}
+                </div> 
+            </div>
+            <div class='row'>
+                <div class="pit">
+                    {{pitA1}}
+                </div>
+                <div class="pit">
+                    {{pitA2}}
+                </div>
+                <div class="pit">
+                    {{pitA3}}
+                </div>
+                <div class="pit">
+                    {{pitA4}}
+                </div>
+                <div class="pit">
+                    {{pitA5}}
+                </div>
+                <div class="pit">
+                    {{pitA6}}
+                </div>
+            </div>
+        </div>
+        <div class='bank'>
+            {{bankB}}
+        </div>
+    </div>
+</template>

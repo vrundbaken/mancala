@@ -1,6 +1,18 @@
 <template name="game">
-    {{gameId}}
+    {{_id}}
+    <ol start="0">
+        {{#if boardData}}
+            {{#each boardData}}
+                <li>{{this}} </li>
+            {{/each}}
+        {{/if}}
+    </ol>
+    {{status}} {{turn}}
+    {{>board}}
     
+<!--     {{#if boardData}}
+        {{>board board=boardData}}
+    {{/if}} -->
     <div id='board'>
         <div id='bank-a'>
         </div>
