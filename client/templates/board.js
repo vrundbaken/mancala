@@ -47,10 +47,11 @@ Template.board.events({
     'click .pit': function( event, template ){
         // Prevent default click behavior
         event.preventDefault();
+        //Populates object with data from DB
         var game = new Mancala.Game(this._id);
-        console.log("about to set pit")
+        //Get index of clicked pit and converts to int
         var pit = Number($(event.currentTarget).attr('data-pit-id'));
-        console.log(typeof pit);
+        //Moves stones at selected pit if valid
         game.move(pit);
     }
 });
