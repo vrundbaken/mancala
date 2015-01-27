@@ -49,9 +49,7 @@ Template.board.events({
         event.preventDefault();
         var game = new Mancala.Game(this._id);
         console.log("about to set pit")
-        var pit = $(event.currentTarget).attr('data-pit-id');
-        
-        console.log(game)
-        //game.move(pit);
+        var pit = Number($(event.currentTarget).attr('data-pit-id'));
+        game.move(pit);
     }
 });
