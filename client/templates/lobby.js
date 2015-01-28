@@ -3,6 +3,8 @@ Template.lobby.events({
         //prevent default click behavior
         event.preventDefault();
         
+        //TODO prevent user from creating more than 1 game with status waiting
+        
         //creates a new game with current user as challenger
         var game = new Mancala.Game();
         console.log(game._id);
@@ -15,13 +17,16 @@ Template.lobby.events({
         var game = new Mancala.Game( gameId );
         
         //prevents user from starting game with self
-        if (Meteor.userId === game.challenger) {
-            return "you can't play with yourself";
+        if (Meteor.userId() === game.challenger) {
+            //if user is challenger go to existing game
+            Router.go('/game/' + game._id)
+        } else {
+            game.opponent = Meteor.userId();
+            game.status = 'ready';
+            game.save();
+            Router.go('/game/' + game._id)
         }
-        game.opponent = Meteor.userId();
-        game.status = 'ready';
-        game.save();
-        Router.go('/game/' + game._id)
+        
     }
 });
 
