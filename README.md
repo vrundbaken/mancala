@@ -10,7 +10,7 @@ The board is made up of 12 pits and 2 banks. Each players has 6 pits and 1 bank.
 
 #### Demos
 
-TBA
+[mancala.meteor.com](mancala.meteor.com)
 
 #### Game class
 
