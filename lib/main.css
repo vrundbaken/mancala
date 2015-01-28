@@ -1,39 +1,24 @@
-.bank {
-    width:12.5%;
-    height: 100%;
-    display: inline-block;
-    border: 1px solid red;
-    padding:0;
-    margin:0;
-    font-size: 20px;
-}
-table{
-    width: 100%
-}
-td{
-    width:12.5%;
-    height: 60px;
-}
-.pit {
-    width: 12.5%;
-    height: 100%;
-    display: inline-block;
-    border: 1px solid red;
-    padding:0;
-    margin:-1px;
-    font-size: 20px;
-}
 #board{
     font-size:0;
     height:100px;
     width:600px
-
 }
+
+.bank {
+    width:12%;
+    height: 95%;
+    display: inline-block;
+    border: 1px solid red;
+    font-size: 20px;
+    vertical-align: top;
+}
+
 #pit-container{
     width: 75%;
     height: 100%;
     display: inline-block;
     border: 1px solid red;
+    vertical-align: top;
 }
 
 .row {
@@ -41,4 +26,22 @@ td{
     width: 100%;
     display: inline-block;
     border: 1px solid red;
+}
+
+.pit {
+    width: 16.666%;
+    height: 100%;
+    display: inline-block;
+    border: 1px solid red;
+    padding:0;
+    margin:-1px;
+    font-size: 20px;
+}
+
+table{
+    width: 100%
+}
+td{
+    width:12.5%;
+    height: 60px;
 }

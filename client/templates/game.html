@@ -1,13 +1,7 @@
 <template name="game">
     {{_id}}
-    <ol start="0">
-        {{#if boardData}}
-            {{#each boardData}}
-                <li>{{this}} </li>
-            {{/each}}
-        {{/if}}
-    </ol>
-    {{status}} {{turn}}
+    
+    {{status}} turn:{{turn}}
     {{>board}}
     
 <!--     {{#if boardData}}
