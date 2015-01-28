@@ -1,0 +1,13 @@
+<template name ='lobby'>
+    {{#if currentUser }}
+        create new game
+    <a  href='#' id='new-game'>Create new game</a>
+    <ul>
+        {{#each this}}
+        <li><a href='#' data-game-id='{{_id}}' class='join-game'>{{_id}} Play </a></li>
+        {{/each}}
+    </ul>
+    {{else}}
+    log in to create a game
+    {{/if}}
+</template>
