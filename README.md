@@ -33,3 +33,4 @@ TBA
 * `Mancala.Game.isCapture( index )` - returns true if current index meets the rules to capture players stones
 * `Mancala.Game.capture ( index )` - moves stones perpendicular to index to players store + 1 extra for final stone that was used to capture
 * `Mancala.Game.nextTurn()` - Sets turn to next players turn
+* `Mancala.Game.gameOver()` - Checks if either player has run out of stones, if true the game is over and remaining stones are added to the other players pit
