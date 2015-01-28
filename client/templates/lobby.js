@@ -13,6 +13,11 @@ Template.lobby.events({
         event.preventDefault();
         var gameId = $(event.currentTarget).attr('data-game-id');
         var game = new Mancala.Game( gameId );
+        
+        //prevents user from starting game with self
+        if (Meteor.userId === game.challenger) {
+            return "you can't play with yourself";
+        }
         game.opponent = Meteor.userId();
         game.status = 'ready';
         game.save();
